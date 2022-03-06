@@ -20,8 +20,8 @@ rustPlatform.buildRustPackage rec {
   doCheck = true;
 
   meta = with lib; {
-    #description = "Command-line frontends for Sequoia";
-    #homepage = "https://sequoia-pgp.org/";
+    description = "OpenPGP Card store";
+    homepage = "https://gitlab.com/sequoia-pgp/pks-openpgp-card";
     platforms = platforms.linux ++ platforms.darwin;
     license = licenses.lgpl2Plus;
 
