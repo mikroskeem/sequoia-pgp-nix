@@ -48,5 +48,11 @@
         packages.pks-openpgp-card = pkgs.callPackage ./pks-openpgp-card.nix {
           rustPlatform = mkRustPlatform "stable" "1.56.1";
         };
+
+        packages.openpgp-card-tools = pkgs.callPackage ./openpgp-card-tools.nix {
+          inherit (pkgs.darwin.apple_sdk.frameworks) PCSC;
+
+          rustPlatform = mkRustPlatform "stable" "1.56.1";
+        };
       });
 }
