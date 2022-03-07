@@ -56,5 +56,11 @@
 
           rustPlatform = mkRustPlatform "stable" "1.56.1";
         };
+
+        devShell = pkgs.mkShell {
+          buildInputs = [
+            pkgs.systemfd
+          ];
+        };
       });
 }
