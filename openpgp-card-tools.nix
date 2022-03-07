@@ -44,6 +44,6 @@ rustPlatform.buildRustPackage rec {
     description = "OpenPGP card tools";
     homepage = "https://gitlab.com/hkos/openpgp-card";
     platforms = platforms.linux ++ platforms.darwin;
-    license = licenses.lgpl2Plus;
+    licenses = [ licenses.mit licenses.asl20 ];
   };
 }
