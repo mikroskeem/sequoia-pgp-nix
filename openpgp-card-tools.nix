@@ -3,6 +3,7 @@
 , fetchFromGitLab
 , rustPlatform
 , pkg-config
+, llvmPackages
 , nettle
 , pcsclite
 , PCSC
@@ -25,6 +26,7 @@ rustPlatform.buildRustPackage rec {
     cp ${./openpgp-card-Cargo.lock} ./Cargo.lock
   '';
 
+  LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
   buildAndTestSubdir = "tools";
 
   buildInputs = [
