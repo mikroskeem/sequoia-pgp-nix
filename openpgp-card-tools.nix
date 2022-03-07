@@ -37,6 +37,7 @@ rustPlatform.buildRustPackage rec {
   ];
 
   nativeBuildInputs = [
+    llvmPackages.clang
     pkg-config
   ];
 
