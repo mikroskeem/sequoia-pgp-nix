@@ -13,16 +13,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "sq";
-  version = "0.26.0";
+  version = "0.27.0";
 
   src = fetchFromGitLab {
     owner = "sequoia-pgp";
     repo = "sequoia";
     rev = "sq/v${version}";
-    sha256 = "sha256-oRxtj8y8QIcgSGwU253WQsmAs9sGCwT4z7BffnTYi+U=";
+    hash = "sha256-KhJAXpj47Tvds5SLYwnsNeIlPf9QEopoCzsvvHgCwaI=";
   };
 
-  cargoSha256 = "sha256-w97EZ7sbRu4dfxiGlLL5EiwxKhHTBM5BrwczUZAfV/4=";
+  cargoHash = "sha256-QSO6UmJdHcDy6vzo3MIWvhTeWDDs/SGmhfF47nghbFE=";
   buildAndTestSubdir = "sq";
 
   buildInputs = [
