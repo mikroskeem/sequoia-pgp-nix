@@ -1,6 +1,6 @@
 { stdenv
 , lib
-, fetchFromGitHub
+, fetchFromGitLab
 , rustPlatform
 , pkg-config
 , pcsclite
@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "pks-openpgp-card";
-  version = "e83208de8ff1ac5fc0461fa450b1e867dc3b7638";
+  version = "753b53c9bdbdb98cd9e57a0a94bd1f15776ecf48";
 
-  src = fetchFromGitHub {
-    owner = "mikroskeem";
+  src = fetchFromGitLab {
+    owner = "sequoia-pgp";
     repo = "pks-openpgp-card";
     rev = version;
-    sha256 = "sha256-8wsPgd1ZSGWIWZlBR5gnkaqW4O/2mEzgI0A6oGvlzEM=";
+    hash = "sha256-ThzOWb0OtVtqFoFA2lbAAYHMzkHo7XgoYn3hGZ+0rus=";
   };
 
-  cargoSha256 = "sha256-Z31UROtesXgoAqftDTn9i8l+xH5up8Mj2AuChZaizuI=";
+  cargoHash = "sha256-b7mGLzG+Q//3BgrW08qXH26OHnLj9CqPyeWK8Yu2S6w=";
 
   buildInputs = [
     pcsclite
