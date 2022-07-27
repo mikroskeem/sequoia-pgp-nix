@@ -42,19 +42,19 @@
         packages.sq = pkgs.callPackage ./sq.nix {
           inherit (pkgs.darwin.apple_sdk.frameworks) Security;
 
-          rustPlatform = mkRustPlatform "stable" "1.56.1";
+          rustPlatform = mkRustPlatform "stable" "1.62.1";
         };
 
         packages.pks-openpgp-card = pkgs.callPackage ./pks-openpgp-card.nix {
           inherit (pkgs.darwin.apple_sdk.frameworks) PCSC;
 
-          rustPlatform = mkRustPlatform "stable" "1.56.1";
+          rustPlatform = mkRustPlatform "stable" "1.62.1";
         };
 
         packages.openpgp-card-tools = pkgs.callPackage ./openpgp-card-tools.nix {
           inherit (pkgs.darwin.apple_sdk.frameworks) PCSC;
 
-          rustPlatform = mkRustPlatform "stable" "1.56.1";
+          rustPlatform = mkRustPlatform "stable" "1.62.1";
         };
 
         devShell = pkgs.mkShell {
